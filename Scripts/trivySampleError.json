@@ -1,0 +1,2407 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "/home/vsts/work/1/edge-scewebapimodule/dockerimage.tar",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "alpine",
+      "Name": "3.16.2"
+    },
+    "ImageID": "sha256:03a96eb734a0e1e4441e924281b3e647515e90be0c563508719c6793943eac11",
+    "DiffIDs": [
+      "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7",
+      "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272",
+      "sha256:192700a4fe58a24fcf3271f32456023d7493fa1a07f959905c70342d6e13bfcf",
+      "sha256:a045d3d09073de43620dd20a0c2263f09cb95a933f96f8512dea4bdc10f518a9",
+      "sha256:203712a456c3efff414b7278c32e110d61e9c20961fa482ce8703de97b07f06a",
+      "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "container": "e3cfc8025c175d1fb46f6f6f161c3383bd83801efc19e71a0310ddb88128dc62",
+      "created": "2022-11-14T07:23:31.139009244Z",
+      "docker_version": "20.10.20+azure-1",
+      "history": [
+        {
+          "created": "2022-08-09T17:19:53.274069586Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:2a949686d9886ac7c10582a6c29116fd29d3077d02755e87e111870d63607725 in / "
+        },
+        {
+          "created": "2022-08-09T17:19:53.47374331Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/sh\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2022-09-07T12:48:40.809626711Z",
+          "created_by": "/bin/sh -c apk add --no-cache         ca-certificates                 krb5-libs         libgcc         libintl         libssl1.1         libstdc++         zlib"
+        },
+        {
+          "created": "2022-09-07T12:48:41.134044983Z",
+          "created_by": "/bin/sh -c #(nop)  ENV ASPNETCORE_URLS=http://+:80 DOTNET_RUNNING_IN_CONTAINER=true DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true",
+          "empty_layer": true
+        },
+        {
+          "created": "2022-09-07T12:48:45.539363671Z",
+          "created_by": "/bin/sh -c #(nop)  ENV DOTNET_VERSION=6.0.8",
+          "empty_layer": true
+        },
+        {
+          "created": "2022-09-07T12:48:48.755613866Z",
+          "created_by": "/bin/sh -c wget -O dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Runtime/$DOTNET_VERSION/dotnet-runtime-$DOTNET_VERSION-linux-musl-x64.tar.gz     \u0026\u0026 dotnet_sha512='3e627b704f291311c7c54251745a0dac294259fa7984cb0e6c99103ce012aa724add3be883679895aa3e9692b6166639871ba62830165a120759a98bc03eeff8'     \u0026\u0026 echo \"$dotnet_sha512  dotnet.tar.gz\" | sha512sum -c -     \u0026\u0026 mkdir -p /usr/share/dotnet     \u0026\u0026 tar -oxzf dotnet.tar.gz -C /usr/share/dotnet     \u0026\u0026 rm dotnet.tar.gz     \u0026\u0026 ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet"
+        },
+        {
+          "created": "2022-09-07T12:48:56.3289709Z",
+          "created_by": "/bin/sh -c #(nop)  ENV ASPNET_VERSION=6.0.8",
+          "empty_layer": true
+        },
+        {
+          "created": "2022-09-07T12:48:59.815346388Z",
+          "created_by": "/bin/sh -c wget -O aspnetcore.tar.gz https://dotnetcli.azureedge.net/dotnet/aspnetcore/Runtime/$ASPNET_VERSION/aspnetcore-runtime-$ASPNET_VERSION-linux-musl-x64.tar.gz     \u0026\u0026 aspnetcore_sha512='28655f1769477e62cc0eb776283d55bb1a921c42aa4e772612bb42d4441f425e792e236934ceb5e6bc880e71ba30cdd8b9cc290ded81a6a96739cf07ef72ecdf'     \u0026\u0026 echo \"$aspnetcore_sha512  aspnetcore.tar.gz\" | sha512sum -c -     \u0026\u0026 tar -oxzf aspnetcore.tar.gz -C /usr/share/dotnet ./shared/Microsoft.AspNetCore.App     \u0026\u0026 rm aspnetcore.tar.gz"
+        },
+        {
+          "created": "2022-11-14T07:23:25.448825302Z",
+          "created_by": "/bin/sh -c #(nop) WORKDIR /app"
+        },
+        {
+          "created": "2022-11-14T07:23:27.994039607Z",
+          "created_by": "/bin/sh -c #(nop) COPY dir:72632be8912eb54cd13346de921356e474d57a5f08cc0281f7fd5bcb2142e137 in ./ "
+        },
+        {
+          "created": "2022-11-14T07:23:28.198854316Z",
+          "created_by": "/bin/sh -c #(nop)  ENV ASPNETCORE_ENVIRONMENT=Edge",
+          "empty_layer": true
+        },
+        {
+          "created": "2022-11-14T07:23:29.142500491Z",
+          "created_by": "/bin/sh -c #(nop)  ENV ASPNETCORE_URLS=http://+:8080",
+          "empty_layer": true
+        },
+        {
+          "created": "2022-11-14T07:23:30.140555763Z",
+          "created_by": "/bin/sh -c #(nop)  EXPOSE 8080",
+          "empty_layer": true
+        },
+        {
+          "created": "2022-11-14T07:23:31.139009244Z",
+          "created_by": "/bin/sh -c #(nop)  ENTRYPOINT [\"./ABB.PAM.SCEEngineering.WebApi\"]",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7",
+          "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272",
+          "sha256:192700a4fe58a24fcf3271f32456023d7493fa1a07f959905c70342d6e13bfcf",
+          "sha256:a045d3d09073de43620dd20a0c2263f09cb95a933f96f8512dea4bdc10f518a9",
+          "sha256:203712a456c3efff414b7278c32e110d61e9c20961fa482ce8703de97b07f06a",
+          "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+        ]
+      },
+      "config": {
+        "Entrypoint": [
+          "./ABB.PAM.SCEEngineering.WebApi"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "ASPNETCORE_URLS=http://+:8080",
+          "DOTNET_RUNNING_IN_CONTAINER=true",
+          "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true",
+          "DOTNET_VERSION=6.0.8",
+          "ASPNET_VERSION=6.0.8",
+          "ASPNETCORE_ENVIRONMENT=Edge"
+        ],
+        "Image": "sha256:8a040a6be75fa80c3c7147404a30a8c8874cc9c5ff112f3103b40db4e8262f1c",
+        "WorkingDir": "/app",
+        "ExposedPorts": {
+          "8080/tcp": {}
+        }
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "/home/vsts/work/1/edge-scewebapimodule/dockerimage.tar (alpine 3.16.2)",
+      "Class": "os-pkgs",
+      "Type": "alpine",
+      "Packages": [
+        {
+          "ID": "alpine-baselayout@3.2.0-r22",
+          "Name": "alpine-baselayout",
+          "Version": "3.2.0-r22",
+          "SrcName": "alpine-baselayout",
+          "SrcVersion": "3.2.0-r22",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "alpine-baselayout-data@3.2.0-r22",
+            "busybox@1.35.0-r17",
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "alpine-baselayout-data@3.2.0-r22",
+          "Name": "alpine-baselayout-data",
+          "Version": "3.2.0-r22",
+          "SrcName": "alpine-baselayout",
+          "SrcVersion": "3.2.0-r22",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "alpine-keys@2.4-r1",
+          "Name": "alpine-keys",
+          "Version": "2.4-r1",
+          "SrcName": "alpine-keys",
+          "SrcVersion": "2.4-r1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "apk-tools@2.12.9-r3",
+          "Name": "apk-tools",
+          "Version": "2.12.9-r3",
+          "SrcName": "apk-tools",
+          "SrcVersion": "2.12.9-r3",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "ca-certificates-bundle@20220614-r0",
+            "libcrypto1.1@1.1.1q-r0",
+            "libssl1.1@1.1.1q-r0",
+            "musl@1.2.3-r0",
+            "zlib@1.2.12-r3"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "busybox@1.35.0-r17",
+          "Name": "busybox",
+          "Version": "1.35.0-r17",
+          "SrcName": "busybox",
+          "SrcVersion": "1.35.0-r17",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "ca-certificates@20220614-r0",
+          "Name": "ca-certificates",
+          "Version": "20220614-r0",
+          "SrcName": "ca-certificates",
+          "SrcVersion": "20220614-r0",
+          "Licenses": [
+            "MPL-2.0",
+            "MIT"
+          ],
+          "DependsOn": [
+            "busybox@1.35.0-r17",
+            "libcrypto1.1@1.1.1q-r0",
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272"
+          }
+        },
+        {
+          "ID": "ca-certificates-bundle@20220614-r0",
+          "Name": "ca-certificates-bundle",
+          "Version": "20220614-r0",
+          "SrcName": "ca-certificates",
+          "SrcVersion": "20220614-r0",
+          "Licenses": [
+            "MPL-2.0",
+            "MIT"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "keyutils-libs@1.6.3-r1",
+          "Name": "keyutils-libs",
+          "Version": "1.6.3-r1",
+          "SrcName": "keyutils",
+          "SrcVersion": "1.6.3-r1",
+          "Licenses": [
+            "GPL-2.0",
+            "LGPL-2.0-or-later"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272"
+          }
+        },
+        {
+          "ID": "krb5-conf@1.0-r2",
+          "Name": "krb5-conf",
+          "Version": "1.0-r2",
+          "SrcName": "krb5-conf",
+          "SrcVersion": "1.0-r2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "DiffID": "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272"
+          }
+        },
+        {
+          "ID": "krb5-libs@1.19.3-r0",
+          "Name": "krb5-libs",
+          "Version": "1.19.3-r0",
+          "SrcName": "krb5",
+          "SrcVersion": "1.19.3-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "DependsOn": [
+            "keyutils-libs@1.6.3-r1",
+            "krb5-conf@1.0-r2",
+            "libcom_err@1.46.5-r0",
+            "libcrypto1.1@1.1.1q-r0",
+            "libssl1.1@1.1.1q-r0",
+            "libverto@0.3.2-r0",
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272"
+          }
+        },
+        {
+          "ID": "libc-utils@0.7.2-r3",
+          "Name": "libc-utils",
+          "Version": "0.7.2-r3",
+          "SrcName": "libc-dev",
+          "SrcVersion": "0.7.2-r3",
+          "Licenses": [
+            "BSD-2-Clause",
+            "BSD-3-Clause"
+          ],
+          "DependsOn": [
+            "musl-utils@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "libcom_err@1.46.5-r0",
+          "Name": "libcom_err",
+          "Version": "1.46.5-r0",
+          "SrcName": "e2fsprogs",
+          "SrcVersion": "1.46.5-r0",
+          "Licenses": [
+            "GPL-2.0",
+            "LGPL-2.0-or-later",
+            "BSD-3-Clause",
+            "MIT"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272"
+          }
+        },
+        {
+          "ID": "libcrypto1.1@1.1.1q-r0",
+          "Name": "libcrypto1.1",
+          "Version": "1.1.1q-r0",
+          "SrcName": "openssl",
+          "SrcVersion": "1.1.1q-r0",
+          "Licenses": [
+            "OpenSSL"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "libgcc@11.2.1_git20220219-r2",
+          "Name": "libgcc",
+          "Version": "11.2.1_git20220219-r2",
+          "SrcName": "gcc",
+          "SrcVersion": "11.2.1_git20220219-r2",
+          "Licenses": [
+            "GPL-2.0",
+            "LGPL-2.1-or-later"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272"
+          }
+        },
+        {
+          "ID": "libintl@0.21-r2",
+          "Name": "libintl",
+          "Version": "0.21-r2",
+          "SrcName": "gettext",
+          "SrcVersion": "0.21-r2",
+          "Licenses": [
+            "LGPL-2.1-or-later"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272"
+          }
+        },
+        {
+          "ID": "libssl1.1@1.1.1q-r0",
+          "Name": "libssl1.1",
+          "Version": "1.1.1q-r0",
+          "SrcName": "openssl",
+          "SrcVersion": "1.1.1q-r0",
+          "Licenses": [
+            "OpenSSL"
+          ],
+          "DependsOn": [
+            "libcrypto1.1@1.1.1q-r0",
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "libstdc++@11.2.1_git20220219-r2",
+          "Name": "libstdc++",
+          "Version": "11.2.1_git20220219-r2",
+          "SrcName": "gcc",
+          "SrcVersion": "11.2.1_git20220219-r2",
+          "Licenses": [
+            "GPL-2.0",
+            "LGPL-2.1-or-later"
+          ],
+          "DependsOn": [
+            "libgcc@11.2.1_git20220219-r2",
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272"
+          }
+        },
+        {
+          "ID": "libverto@0.3.2-r0",
+          "Name": "libverto",
+          "Version": "0.3.2-r0",
+          "SrcName": "libverto",
+          "SrcVersion": "0.3.2-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:7ed0076f40a6f354b58b46364c70689af8655dfa8bdc7ad1ec332826bb791272"
+          }
+        },
+        {
+          "ID": "musl@1.2.3-r0",
+          "Name": "musl",
+          "Version": "1.2.3-r0",
+          "SrcName": "musl",
+          "SrcVersion": "1.2.3-r0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "musl-utils@1.2.3-r0",
+          "Name": "musl-utils",
+          "Version": "1.2.3-r0",
+          "SrcName": "musl",
+          "SrcVersion": "1.2.3-r0",
+          "Licenses": [
+            "MIT",
+            "BSD-3-Clause",
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0",
+            "scanelf@1.3.4-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "scanelf@1.3.4-r0",
+          "Name": "scanelf",
+          "Version": "1.3.4-r0",
+          "SrcName": "pax-utils",
+          "SrcVersion": "1.3.4-r0",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "ssl_client@1.35.0-r17",
+          "Name": "ssl_client",
+          "Version": "1.35.0-r17",
+          "SrcName": "busybox",
+          "SrcVersion": "1.35.0-r17",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "libcrypto1.1@1.1.1q-r0",
+            "libssl1.1@1.1.1q-r0",
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        },
+        {
+          "ID": "zlib@1.2.12-r3",
+          "Name": "zlib",
+          "Version": "1.2.12-r3",
+          "SrcName": "zlib",
+          "SrcVersion": "1.2.12-r3",
+          "Licenses": [
+            "Zlib"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:994393dc58e7931862558d06e46aa2bb17487044f670f310dffe1d24e4d1eec7"
+          }
+        }
+      ]
+    },
+    {
+      "Target": "usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.8/Microsoft.NETCore.App.deps.json",
+      "Class": "lang-pkgs",
+      "Type": "dotnet-core",
+      "Packages": [
+        {
+          "Name": "Microsoft.NETCore.App.Runtime.linux-musl-x64",
+          "Version": "6.0.8",
+          "Layer": {
+            "DiffID": "sha256:192700a4fe58a24fcf3271f32456023d7493fa1a07f959905c70342d6e13bfcf"
+          }
+        }
+      ]
+    },
+    {
+      "Target": "usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.8/Microsoft.AspNetCore.App.deps.json",
+      "Class": "lang-pkgs",
+      "Type": "dotnet-core",
+      "Packages": [
+        {
+          "Name": "Microsoft.AspNetCore.App.Runtime.linux-musl-x64",
+          "Version": "6.0.8",
+          "Layer": {
+            "DiffID": "sha256:a045d3d09073de43620dd20a0c2263f09cb95a933f96f8512dea4bdc10f518a9"
+          }
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2022-38013",
+          "PkgName": "Microsoft.AspNetCore.App.Runtime.linux-musl-x64",
+          "InstalledVersion": "6.0.8",
+          "FixedVersion": "6.0.9, 3.1.29",
+          "Layer": {
+            "DiffID": "sha256:a045d3d09073de43620dd20a0c2263f09cb95a933f96f8512dea4bdc10f518a9"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-38013",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Nuget",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anuget"
+          },
+          "Title": "dotnet: DenialOfService - ASP.NET Core MVC vulnerable to stack overflow via ModelStateDictionary recursion.",
+          "Description": ".NET Core and Visual Studio Denial of Service Vulnerability.",
+          "Severity": "HIGH",
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2022:6521",
+            "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-38013.json",
+            "https://access.redhat.com/security/cve/CVE-2022-38013",
+            "https://bugzilla.redhat.com/2125124",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38013",
+            "https://devblogs.microsoft.com/dotnet/september-2022-updates/",
+            "https://errata.almalinux.org/9/ALSA-2022-6521.html",
+            "https://github.com/advisories/GHSA-r8m2-4x37-6592",
+            "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-r8m2-4x37-6592",
+            "https://linux.oracle.com/cve/CVE-2022-38013.html",
+            "https://linux.oracle.com/errata/ELSA-2022-6539.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7HCV4TQGOTOFHO5ETRKGFKAGYV2YAUVE/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JA6F4CDKLI3MALV6UK3P2DR5AGCLTT7Y/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/K4K5YL7USOKIR3O2DUKBZMYPWXYPDKXG/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WL334CKOHA6BQQSYJW365HIWJ4IOE45M/",
+            "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38013",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-38013",
+            "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2022-38013",
+            "https://ubuntu.com/security/notices/USN-5609-1"
+          ],
+          "PublishedDate": "2022-09-13T19:15:00Z",
+          "LastModifiedDate": "2022-10-28T14:15:00Z"
+        }
+      ]
+    },
+    {
+      "Target": "app/ABB.PAM.SCEEngineering.WebApi.deps.json",
+      "Class": "lang-pkgs",
+      "Type": "dotnet-core",
+      "Packages": [
+        {
+          "Name": "ABB.Ability.DataProvider.Common",
+          "Version": "1.5.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "ABB.IA.Digital.Authorization.PolicyHandler",
+          "Version": "1.0.94",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "ABB.IA.Digital.Edge.Authentication.BackgroundApp.Extensions",
+          "Version": "1.4.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "ABB.IA.Digital.Edge.Authentication.BackgroundApp.Models",
+          "Version": "1.4.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "ABB.IA.Digital.Edge.KeyVaultManagement.Extensions",
+          "Version": "1.0.28",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "ABB.IA.Digital.Edge.KeyVaultManagement.Models",
+          "Version": "1.0.28",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "ABB.IA.Edge.Ability.Module",
+          "Version": "2.0.41",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "ABB.IA.Edge.Ability.Types",
+          "Version": "2.0.41",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Azure.Core",
+          "Version": "1.25.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Azure.Identity",
+          "Version": "1.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Azure.Security.KeyVault.Certificates",
+          "Version": "4.4.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Azure.Security.KeyVault.Keys",
+          "Version": "4.4.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Azure.Security.KeyVault.Secrets",
+          "Version": "4.4.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "IdentityModel",
+          "Version": "4.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "IdentityModel.AspNetCore.OAuth2Introspection",
+          "Version": "4.0.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "IdentityServer4.AccessTokenValidation",
+          "Version": "3.0.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "MQTTnet",
+          "Version": "3.1.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "MQTTnet.Extensions.ManagedClient",
+          "Version": "3.1.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.ApplicationInsights",
+          "Version": "2.21.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.ApplicationInsights.AspNetCore",
+          "Version": "2.21.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.ApplicationInsights.DependencyCollector",
+          "Version": "2.21.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.ApplicationInsights.EventCounterCollector",
+          "Version": "2.21.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.ApplicationInsights.PerfCounterCollector",
+          "Version": "2.21.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.ApplicationInsights.WindowsServer",
+          "Version": "2.21.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel",
+          "Version": "2.21.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Authentication.Abstractions",
+          "Version": "2.2.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Authentication.AzureAD.UI",
+          "Version": "3.1.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Authentication.AzureADB2C.UI",
+          "Version": "3.1.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Authentication.JwtBearer",
+          "Version": "3.1.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+          "Version": "3.1.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Authorization",
+          "Version": "3.1.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Authorization.Policy",
+          "Version": "2.2.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Cors",
+          "Version": "2.2.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Hosting",
+          "Version": "2.1.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Hosting.Abstractions",
+          "Version": "2.1.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Hosting.Server.Abstractions",
+          "Version": "2.1.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Http",
+          "Version": "2.1.22",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Http.Abstractions",
+          "Version": "2.2.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Http.Extensions",
+          "Version": "2.2.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Http.Features",
+          "Version": "2.2.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.JsonPatch",
+          "Version": "6.0.9",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Metadata",
+          "Version": "3.1.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.Mvc.NewtonsoftJson",
+          "Version": "6.0.9",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.AspNetCore.WebUtilities",
+          "Version": "2.1.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Azure.Services.AppAuthentication",
+          "Version": "1.6.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Bcl.AsyncInterfaces",
+          "Version": "1.1.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.CSharp",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.ApiDescription.Server",
+          "Version": "6.0.5",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Caching.Abstractions",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Caching.Memory",
+          "Version": "6.0.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Configuration",
+          "Version": "3.1.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Configuration.Abstractions",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Configuration.Binder",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Configuration.EnvironmentVariables",
+          "Version": "2.1.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Configuration.FileExtensions",
+          "Version": "3.1.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Configuration.Json",
+          "Version": "3.1.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.DependencyInjection",
+          "Version": "5.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.DependencyModel",
+          "Version": "3.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.FileProviders.Abstractions",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.FileProviders.Physical",
+          "Version": "3.1.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.FileSystemGlobbing",
+          "Version": "3.1.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Hosting.Abstractions",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Logging",
+          "Version": "5.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Logging.Abstractions",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Logging.ApplicationInsights",
+          "Version": "2.21.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.ObjectPool",
+          "Version": "2.1.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Options",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Extensions.Primitives",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Identity.Client",
+          "Version": "4.39.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Identity.Client.Extensions.Msal",
+          "Version": "2.19.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.IdentityModel.Clients.ActiveDirectory",
+          "Version": "5.2.9",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.IdentityModel.JsonWebTokens",
+          "Version": "5.5.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.IdentityModel.Logging",
+          "Version": "5.5.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.IdentityModel.Protocols",
+          "Version": "5.5.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
+          "Version": "5.5.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.IdentityModel.Tokens",
+          "Version": "5.5.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.NETCore.Platforms",
+          "Version": "3.1.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.NETCore.Targets",
+          "Version": "1.1.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Net.Http.Headers",
+          "Version": "2.2.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.OpenApi",
+          "Version": "1.2.3",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Win32.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Win32.Registry",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Microsoft.Win32.SystemEvents",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "NETStandard.Library",
+          "Version": "1.6.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "NJsonSchema",
+          "Version": "10.8.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Namotion.Reflection",
+          "Version": "2.1.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Nerdbank.GitVersioning",
+          "Version": "3.5.113",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Newtonsoft.Json",
+          "Version": "13.0.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Newtonsoft.Json.Bson",
+          "Version": "1.0.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog",
+          "Version": "2.11.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog.AspNetCore",
+          "Version": "6.0.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog.Extensions.Hosting",
+          "Version": "5.0.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog.Extensions.Logging",
+          "Version": "3.1.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog.Formatting.Compact",
+          "Version": "1.1.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog.Settings.Configuration",
+          "Version": "3.4.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog.Sinks.ApplicationInsights",
+          "Version": "4.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog.Sinks.Console",
+          "Version": "4.0.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog.Sinks.Debug",
+          "Version": "2.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Serilog.Sinks.File",
+          "Version": "5.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "SerilogAnalyzer",
+          "Version": "0.15.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Swashbuckle.AspNetCore",
+          "Version": "6.4.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Swashbuckle.AspNetCore.Swagger",
+          "Version": "6.4.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Swashbuckle.AspNetCore.SwaggerGen",
+          "Version": "6.4.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "Swashbuckle.AspNetCore.SwaggerUI",
+          "Version": "6.4.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.AppContext",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Buffers",
+          "Version": "4.5.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Collections",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Collections.Concurrent",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Collections.Immutable",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Collections.NonGeneric",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Collections.Specialized",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.ComponentModel",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.ComponentModel.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.ComponentModel.TypeConverter",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Configuration.ConfigurationManager",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Console",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Diagnostics.Debug",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Diagnostics.DiagnosticSource",
+          "Version": "5.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Diagnostics.PerformanceCounter",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Diagnostics.Process",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Diagnostics.Tools",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Diagnostics.Tracing",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Drawing.Common",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Dynamic.Runtime",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Globalization",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Globalization.Calendars",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Globalization.Extensions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.IO",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.IO.Compression",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.IO.Compression.ZipFile",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.IO.FileSystem",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.IO.FileSystem.AccessControl",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.IO.FileSystem.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.IdentityModel.Tokens.Jwt",
+          "Version": "5.5.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Linq",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Linq.Expressions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Memory",
+          "Version": "4.5.4",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Memory.Data",
+          "Version": "1.0.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Net.Http",
+          "Version": "4.3.4",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Net.NameResolution",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Net.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Net.Sockets",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Numerics.Vectors",
+          "Version": "4.5.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.ObjectModel",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Private.DataContractSerialization",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Private.Uri",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Reflection",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Reflection.Emit",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Reflection.Emit.ILGeneration",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Reflection.Emit.Lightweight",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Reflection.Extensions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Reflection.Metadata",
+          "Version": "1.6.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Reflection.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Reflection.TypeExtensions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Resources.ResourceManager",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime.CompilerServices.Unsafe",
+          "Version": "6.0.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime.Extensions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime.Handles",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime.InteropServices",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime.InteropServices.RuntimeInformation",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime.Numerics",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime.Serialization.Formatters",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime.Serialization.Json",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Runtime.Serialization.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.AccessControl",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Cryptography.Algorithms",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Cryptography.Cng",
+          "Version": "4.5.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Cryptography.Csp",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Cryptography.Encoding",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Cryptography.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Cryptography.ProtectedData",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Cryptography.X509Certificates",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Permissions",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.Principal.Windows",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Security.SecureString",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Text.Encoding",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Text.Encoding.Extensions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Text.Encodings.Web",
+          "Version": "4.7.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Text.Json",
+          "Version": "4.7.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Text.RegularExpressions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Threading",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Threading.Tasks",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Threading.Tasks.Extensions",
+          "Version": "4.5.4",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Threading.Thread",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Threading.ThreadPool",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Threading.Timer",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Windows.Extensions",
+          "Version": "4.7.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Xml.ReaderWriter",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Xml.XDocument",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Xml.XmlDocument",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "System.Xml.XmlSerializer",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "morelinq",
+          "Version": "3.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Collections",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Diagnostics.Tools",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Diagnostics.Tracing",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Globalization",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Globalization.Calendars",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.IO",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Reflection",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Reflection.Extensions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Reflection.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Resources.ResourceManager",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Runtime",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Runtime.Handles",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Runtime.InteropServices",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Text.Encoding",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Text.Encoding.Extensions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Threading.Tasks",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.any.System.Threading.Timer",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.native.System",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.native.System.IO.Compression",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.native.System.Net.Http",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.native.System.Security.Cryptography.Apple",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl",
+          "Version": "4.3.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.unix.Microsoft.Win32.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.unix.System.Console",
+          "Version": "4.3.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.unix.System.Diagnostics.Debug",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.unix.System.IO.FileSystem",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.unix.System.Net.Primitives",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.unix.System.Net.Sockets",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.unix.System.Private.Uri",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        },
+        {
+          "Name": "runtime.unix.System.Runtime.Extensions",
+          "Version": "4.3.0",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          }
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2021-34532",
+          "PkgName": "Microsoft.AspNetCore.Authentication.JwtBearer",
+          "InstalledVersion": "3.1.3",
+          "FixedVersion": "2.1.29, 5.0.9, 3.1.18",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-34532",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Nuget",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anuget"
+          },
+          "Title": "dotnet: ASP.NET Core JWT token logging",
+          "Description": "ASP.NET Core and Visual Studio Information Disclosure Vulnerability",
+          "Severity": "MEDIUM",
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.5
+            },
+            "nvd": {
+              "V2Vector": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V2Score": 2.1,
+              "V3Score": 5.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-26423.json",
+            "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-34485.json",
+            "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-34532.json",
+            "https://access.redhat.com/security/cve/CVE-2021-34532",
+            "https://github.com/advisories/GHSA-q7cg-43mg-qp69",
+            "https://github.com/dotnet/announcements/issues/195",
+            "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-q7cg-43mg-qp69",
+            "https://linux.oracle.com/cve/CVE-2021-34532.html",
+            "https://linux.oracle.com/errata/ELSA-2021-3148.html",
+            "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34532",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-34532",
+            "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-34532"
+          ],
+          "PublishedDate": "2021-08-12T18:15:00Z",
+          "LastModifiedDate": "2021-08-18T18:53:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-24112",
+          "PkgName": "System.Drawing.Common",
+          "InstalledVersion": "4.7.0",
+          "FixedVersion": "5.0.3, 4.7.2",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-24112",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Nuget",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anuget"
+          },
+          "Title": "dotnet: Remote Code Execution Vulnerability",
+          "Description": ".NET Core Remote Code Execution Vulnerability This CVE ID is unique from CVE-2021-26701.",
+          "Severity": "CRITICAL",
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2021-24112",
+            "https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
+            "https://github.com/dotnet/announcements/issues/176",
+            "https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2021-24112",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-24112",
+            "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-24112"
+          ],
+          "PublishedDate": "2021-02-25T23:15:00Z",
+          "LastModifiedDate": "2021-07-07T19:34:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-0820",
+          "PkgName": "System.Text.RegularExpressions",
+          "InstalledVersion": "4.3.0",
+          "FixedVersion": "4.3.1",
+          "Layer": {
+            "DiffID": "sha256:d4ed6a32bbfe2ed87ff3b97d453a7e79768a49ea316758c6be0460c1268dc762"
+          },
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-0820",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Nuget",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anuget"
+          },
+          "Title": "dotnet: timeouts for regular expressions are not enforced",
+          "Description": "A denial of service vulnerability exists when .NET Framework and .NET Core improperly process RegEx strings, aka '.NET Framework and .NET Core Denial of Service Vulnerability'. This CVE ID is unique from CVE-2019-0980, CVE-2019-0981.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-400"
+          ],
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2019:1259",
+            "https://access.redhat.com/security/cve/CVE-2019-0820",
+            "https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
+            "https://linux.oracle.com/cve/CVE-2019-0820.html",
+            "https://linux.oracle.com/errata/ELSA-2019-1259.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-0820",
+            "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-0820"
+          ],
+          "PublishedDate": "2019-05-16T19:29:00Z",
+          "LastModifiedDate": "2020-08-24T17:37:00Z"
+        }
+      ]
+    }
+  ]
+}
