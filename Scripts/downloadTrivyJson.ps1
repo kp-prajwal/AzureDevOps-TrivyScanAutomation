@@ -4,16 +4,11 @@
 $MyPat
 $DefinitionName
 $Branch
+$Company
+$Project
+$ArtifactName
+$DownloadTo
 #------------------------------------------------------------
-
-# Configuration
-$Company = 'ABB-BCI-PCP'
-$Project = 'PCP'
-#Artifact name
-$ArtifactName = 'edge-sceuitool-trivy'
-#Download Path
-$DownloadTo = 'C:\scanAnalysis\Input\TrivyScanReport.zip'
-
 # Build Auth header
 $B64Pat = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes(":$MyPat"))
 $h = @{'Authorization' = 'Basic ' + $B64Pat}
