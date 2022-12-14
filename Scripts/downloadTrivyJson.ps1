@@ -9,8 +9,6 @@ $Branch
 # Configuration
 $Company = 'ABB-BCI-PCP'
 $Project = 'PCP'
-# Personal Access Token to be taken from Azure DevOps - one time process
-$MyPat = 'yrf4jsyilg5adyowthjcffnuhnqtgmqzobhquxceh3f3s3zm5p4a'
 #Artifact name
 $ArtifactName = 'edge-sceuitool-trivy'
 #Download Path
