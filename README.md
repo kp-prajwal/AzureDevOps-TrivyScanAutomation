@@ -43,9 +43,9 @@ Sample output images generated under Output folder.
 
 ## Output
 
-* Output if there are NO vulnerabilties : 
+* Output if there are vulnerabilties : 
   ![Without vulnerabilties - output](Images/OutputWithVuls.jpg)
-* Output if there are vulnerabilties :
+* Output if there are NO vulnerabilties :
   ![With vulnerabilties - output](Images/OutputWithoutVuls.png)
 ## Roadmap
 - Try to explore Metadefender, Blackduck and other scans.
