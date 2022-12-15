@@ -16,8 +16,39 @@ The steps that I have taken to mitigate the problem are :
 2. As the artifacts are in zip format, files are being extracted and analysed for the mention of Vulnerabilties if there are any [Python does this job]
 3. In the same Python script, the analyzed result is written concisely to a .txt file for further action to be taken i.e. to solve the vulnerabilties. [Same guy, Mr.Python]
 4. A Shell script to execute the above Powershell and Python scripts - one command to rule them all and get the results in roughly about 3 seconds.
+    
+## Getting Started
+  - Firstly, you'll need to generate PAT - Personal Access Token from Azure DevOps!
+ ![PAT procedure](Images/PAT.png)
 
+  - Create a file 'inputVariables.ps1' under Scripts folder and add in the credentials.
+  
+      Credentials        | Example
+      ------------------ | -------------
+      $MyPat =           | Personal Access token
+      $DefinitionName =  | Repository Name
+      $Branch =          | Branch Name
+      $Company =         | Organisation Name under which Azure DevOps is registered
+      $Project =         | Team Name registered under AzureDevOps
+      $ArtifactName =    | Scan name to be analyzed. Name to be referred from artifacts under Azure Pipelines
+      $DownloadTo =      | Download path - where the artifacts zip file is downloaded.
 
+## Installation
+
+Head over to Scripts folder and open an integrated terminal and run this command to get the results:
+```bash
+  ./run.sh
+```
+Sample output images generated under Output folder.
+
+## Output
+
+* Output if there are NO vulnerabilties : 
+  ![Without vulnerabilties - output](Images/OutputWithVuls.jpg)
+* Output if there are vulnerabilties :
+  ![With vulnerabilties - output](Images/OutputWithoutVuls.png)
+## Roadmap
+- Try to explore Metadefender, Blackduck and other scans.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
